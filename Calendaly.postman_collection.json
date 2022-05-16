@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "4024790c-7472-424e-935c-e69e0c40ad1e",
+		"name": "Calendaly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Saddam\",\n    \"email\": \"saddamuwejan@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"saddamuwejan@gmail.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get link for authentication",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdlY2YzYTc4NDQzYTk0NGFmNTQ0NzEiLCJlbWFpbCI6InNhZGRhbXV3ZWphbkBnbWFpbC5jb20iLCJpYXQiOjE2NTI0Nzg1NTh9.dIl1vTm31ftvOrrcMI1J6fPeUl_e4cAWh0Y6j4oxg9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/google/create/url",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"google",
+						"create",
+						"url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store google auth token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdlY2YzYTc4NDQzYTk0NGFmNTQ0NzEiLCJlbWFpbCI6InNhZGRhbXV3ZWphbkBnbWFpbC5jb20iLCJpYXQiOjE2NTI0Nzg1NTh9.dIl1vTm31ftvOrrcMI1J6fPeUl_e4cAWh0Y6j4oxg9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"code\": \"4/0AX4XfWiEcUP96hqTCUi0NblsMq1Vs-v2dCDMoQXjZHGRncaOlO5tNpC-9fj0Dn5LW_-8Dg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/google/auth/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"google",
+						"auth",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list user events",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdlY2YzYTc4NDQzYTk0NGFmNTQ0NzEiLCJlbWFpbCI6InNhZGRhbXV3ZWphbkBnbWFpbC5jb20iLCJpYXQiOjE2NTI0Nzg1NTh9.dIl1vTm31ftvOrrcMI1J6fPeUl_e4cAWh0Y6j4oxg9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/events/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"events",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new meeting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdlY2YzYTc4NDQzYTk0NGFmNTQ0NzEiLCJlbWFpbCI6InNhZGRhbXV3ZWphbkBnbWFpbC5jb20iLCJpYXQiOjE2NTI0ODc2MTh9.EbbQs6ZWW0cZCfHrujUJ4x_unW3g46a9tboV-ZCPV3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdlY2YzYTc4NDQzYTk0NGFmNTQ0NzEiLCJlbWFpbCI6InNhZGRhbXV3ZWphbkBnbWFpbC5jb20iLCJpYXQiOjE2NTI0Nzg1NTh9.dIl1vTm31ftvOrrcMI1J6fPeUl_e4cAWh0Y6j4oxg9A",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"meeting_start_date\": \"2022-05-17\",\n    \"meeting_start_hour\": \"15\",\n    \"meeting_start_minute\": \"0\",\n    \"meeting_duration\": \"30\",\n    \"meeting_title\": \"Awesome meeting!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/meetings/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"meetings",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

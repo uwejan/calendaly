@@ -1,0 +1,30 @@
+{
+  "name": "calendaly",
+  "version": "1.0.0",
+  "description": "Calendaly simple task for exceptionaly head of platform Gonzalo de Salterain",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Saddam UWEJAN",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "prettier": "2.6.2"
+  },
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-jwt": "^7.7.1",
+    "googleapis": "^100.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.3",
+    "moment-timezone": "^0.5.34",
+    "mongoose": "^6.0.9",
+    "request-promise": "^4.2.6"
+  }
+}
